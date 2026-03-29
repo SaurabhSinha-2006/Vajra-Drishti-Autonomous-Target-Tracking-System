@@ -47,7 +47,7 @@
 * [cite_start]**DSP Slices:** 2 (0.56% Utilization) [cite: 753]
 * [cite_start]**Estimated On-Chip Power:** 17.275 W [cite: 759]
 
-![Vivado Implementation Summary](images/post_implementation.png)
+![Vivado Implementation Summary](images/post_implementation.jpg)
 
 ---
 
@@ -57,4 +57,4 @@ The architecture was verified using a bottom-up methodology. [cite_start]27 dist
 
 [cite_start]**System Test (`vajra_drishti_ultimate_tb.v`):** The ultimate behavioral verification sequentially feeds real Python-generated hexadecimal video frames into the hardware memory array to simulate a live combat scenario across multiple VGA frames. [cite: 535]
 
-![Simulation Timing Waveform](images/simulation.png)
+![Simulation Timing Waveform](images/simulation.jpg)
