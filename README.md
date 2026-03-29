@@ -16,7 +16,7 @@
 3. [cite_start]**AI Verification:** A custom CNN processes the BRAM data to calculate a mathematical confidence score against a quantized threshold. [cite: 197]
 4. [cite_start]**Actuation & Tracking:** A Diamond Search SAD algorithm continuously locates the target in subsequent frames, while a deadzone-calibrated PWM controller drives physical servos. [cite: 198]
 
-![Complete Sensor-to-Actuator Pipeline](images/complete_architecture.png)
+![Complete Sensor-to-Actuator Pipeline](images/complete_architecture.jpg)
 
 ---
 
