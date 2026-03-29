@@ -47,7 +47,7 @@
 * [cite_start]**DSP Slices:** 2 (0.56% Utilization) [cite: 753]
 * [cite_start]**Estimated On-Chip Power:** 17.275 W [cite: 759]
 
-![Vivado Implementation Summary](images/postimplementation.jpg)
+![Vivado Implementation Summary](images/post_implementation.jpg)
 
 ---
 
