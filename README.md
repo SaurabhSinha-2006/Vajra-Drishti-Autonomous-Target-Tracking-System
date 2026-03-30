@@ -58,3 +58,16 @@ The architecture was verified using a bottom-up methodology. 27 distinct testben
 **System Test (`vajra_drishti_ultimate_tb.v`):** The ultimate behavioral verification sequentially feeds real Python-generated hexadecimal video frames into the hardware memory array to simulate a live combat scenario across multiple VGA frames.
 
 ![Simulation Timing Waveform](images/simulation.jpg)
+
+### System Execution Log (Vivado TCL Console)
+
+To further validate the deterministic nature of the hardware, the testbench outputs a cycle-accurate execution log to the Vivado TCL console. This log tracks the master Finite State Machine (FSM) as it autonomously routes data through the pipeline without any software intervention.
+
+**Key Execution Milestones Demonstrated:**
+* **Frame 3 (Detection):** The hardware radar successfully isolates a moving anomaly against the stabilized background, locking the initial bounding box coordinates (`X=320, Y=239`).
+* **Frame 4 (AI Verification):** The custom CNN accelerator takes over the memory bus, processes the extracted pixels, and calculates a deterministic confidence score (`-70671`). Because this exceeds the quantized threshold, it successfully engages the `[LOCK]` state.
+* **Frame 5 & 6 (Tracking & Actuation):** Control is handed to the SAD tracker, which recalculates the drone's spatial displacement (`X=320, Y=234`) and pushes the data to the PWM controllers to adjust the servo pulse widths.
+
+![Vivado TCL Console Execution Log - Part 1](images/tcl1.jpg)
+
+![Vivado TCL Console Execution Log - Part 2](images/tcl2.jpg)
